@@ -1,6 +1,6 @@
 import React from "react";
 
-const Task = () => {
+const Task = ({ id, taskName, isCompleted }) => {
   return (
     <div className="task-item flex items-center bg-gray-700 rounded-lg px-4 py-2 shadow-md justify-evenly">
       <input
@@ -9,8 +9,8 @@ const Task = () => {
       />
       <input
         type="text"
-        value="Placeholder Task"
-        readOnly
+        value={taskName}
+        readOnly={isCompleted}
         className="flex-1 ml-4 bg-transparent text-white text-lg border-none outline-none cursor-default"
       />
       <button className="text-blue-400 hover:text-blue-300 mx-2 text-sm font-medium cursor-pointer">
